@@ -3,6 +3,14 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+"""Tactics 
+1. Dummy Node 
+2. Two Pointers 
+"""
+"""Runtime
+Time: O(N) - Iterate through the list once 
+Space: O(1) - Only saving 2 pointers regardless of input size
+"""
 """ Explanation
 1. Two Pointers that are updated in each step  are 'prev' and 'curr'. We get the other pointer 'right' from 'curr' and therefore don't technically keep track of it. 
 2. The 'dummy' node is automatically corrected when 'prev' is correct pointing to the new left node in each swap, since 'prev' initially points to the 'dummy' node. 
