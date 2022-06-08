@@ -24,7 +24,7 @@ class Solution:
         aPoint = headA #traverses A first 
         bPoint = headB #traverses B first 
         #Have two pointers, one traversing A then B, the other traversing B then A. 
-        while aPoint != bPoint: 
+        while aPoint != bPoint: # != compares the hashes of two objects
             if aPoint is None: 
                 aPoint = headB 
             else: 
