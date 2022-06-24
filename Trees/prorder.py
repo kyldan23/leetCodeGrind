@@ -11,7 +11,7 @@ class Solution:
         Recursive Complexity: O(depth of the tree) - max height of stack is max depth of tree, would be N if tree is not balanced. 
     Iterative: 
         Time Complexity: O(N)
-        Space Complexity: O(N)
+        Space Complexity: O(N) - depends on the tree's structure
     """
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         """Recursive Solution
