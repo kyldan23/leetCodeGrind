@@ -25,10 +25,12 @@ class Solution:
                 leftContainsOne = helper(root.left) 
                 #if root.left and (root.left.val == 0) and not leftContainsOne: 
                 if not leftContainsOne:
+                    #Prune left child
                     root.left = None
                 rightContainsOne = helper(root.right)
                 #if root.right and (root.right.val == 0) and not rightContainsOne:  
                 if not rightContainsOne:
+                    #Prune right child
                     root.right = None               
                 """if root.val is 1: 
                     return True 
