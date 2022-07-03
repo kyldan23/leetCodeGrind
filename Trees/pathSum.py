@@ -26,7 +26,7 @@ class Solution:
                     return True
                 return False
             else: 
-                if not root.left and not root.right: 
+                if not root.left and not root.right:  
                     return (targetSum - root.val) == 0 
                 else: 
                     leftSearch = helper(root.left, targetSum - root.val) and (root.left is not None)
