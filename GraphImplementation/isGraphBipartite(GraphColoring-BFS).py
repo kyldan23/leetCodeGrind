@@ -29,14 +29,14 @@ class Solution:
                 queue = deque()
                 queue.append(i) #add starting node 
                 color[i] = 1 #mark the node as "visited" by setting its color 
-            while queue: 
-                node = queue.popleft() 
-                for neighbor in graph[node]: #iterate over all neighbors of the popped "node"
-                    if color[neighbor] != 0: #colored (visited) already
-                        if color[neighbor] == color[node]: #if the neighbor's color is the same as the current node 
-                            return False
-                    else: 
-                        queue.append(neighbor) 
-                        color[neighbor] = -color[node] #same pattern: mark node as visited after adding to queue. Neighbor's color must be opposite the current node's color.
+                while queue: 
+                    node = queue.popleft() 
+                    for neighbor in graph[node]: #iterate over all neighbors of the popped "node"
+                        if color[neighbor] != 0: #colored (visited) already
+                            if color[neighbor] == color[node]: #if the neighbor's color is the same as the current node 
+                                return False
+                        else: 
+                            queue.append(neighbor) 
+                            color[neighbor] = -color[node] #same pattern: mark node as visited after adding to queue. Neighbor's color must be opposite the current node's color.
         return True
         
