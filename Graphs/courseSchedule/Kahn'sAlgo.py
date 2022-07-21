@@ -1,4 +1,18 @@
 class Solution:
+    """
+    Understand: 
+
+    Match: Topological Sort - Kahn's Algorithm 
+     - Kahn's algorithm is used to find a topological sort for all the nodes if the graph is a DAG only. Otherwise, it'll be unsuccessful and therefore you know it wasn't a DAG. 
+    Know: Each element in prerequisites list has a direction (prereq => course), which means it's a directed graph. 
+    Not guaranteed: There can be cycles in the graph! This would result in a failure to produce a topological sort containing all the nodes. 
+    
+    Evaluate: 
+        Time: O(E) to build graph + O(V + E) to run Kahn's Algorithm = O(E + V)
+        Space: O(V+E) - size of the dictionary representing the graph?
+    Definitions: 
+    1. E = number of prerequisites (# of edges)
+    """
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         inDegrees, graph = self.degreesAndNeighbors(prerequisites, numCourses)
         leaves_stack = []
