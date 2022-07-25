@@ -4,6 +4,11 @@
 #         self.val = val
 #         self.next = next
 class Solution:
+    """
+    Evaluate: 
+        Time: O(N) - reversing list will only go through list halfway. Even if it went the full way back, still linear. 
+        Space: O(1) 
+    """
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         # Edge Case: Single node is a palindrome 
         if head.next is None: 
