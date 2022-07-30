@@ -17,15 +17,20 @@ class Solution:
         currSum = nums[0] #current sum 
         maxSum = nums[0]  #holds the maximum sum so far 
         
-        for num in nums[1:]: 
+        for num in nums[1:]:
+            """Two line solution: Kadane's Algorithm"""
+            currSum = max(num, currSum + num) #finds local max
+            maxSum = max(maxSum, currSum) #compares local max to global max 
             """ Works 
             currSum += num 
             if currSum < num: 
                 currSum = num 
             maxSum = max(maxSum, currSum)
             """
+            """ Works
             if currSum < 0: 
                 currSum = 0 
             currSum += num
             maxSum = max(maxSum, currSum)
+            """
         return maxSum
