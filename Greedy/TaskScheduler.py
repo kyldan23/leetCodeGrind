@@ -25,7 +25,7 @@ class Solution:
         -Increment the time 
     
     Evaluate: 
-        Time: O(N)
+        Time: Time: O(N), more precise is O(N*m), where m is the idle time. In the worst case, all the tasks are the same letter, which means having the idle time for each task.
             1. Count frequency of each task into dictionary: O(N)
             2. Adding to heap is O(log26) = O(1) since at most 26 elements, based on the number of letters in the alphabet, doesn't grow with input.  
         Space: O(1) - size of dictionary, queue, and heap are all capped at 26 elements, doesn't grow with input size. 
