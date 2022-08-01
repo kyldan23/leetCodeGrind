@@ -2,9 +2,9 @@ class Solution:
     """
     Evaluate: 
         Time: O(n^3) - Two nested for loops, plus finding the substring. 
-            1. Nested for loop: O(N^2)
-            2. Inside the inner for loop, find the substring, worst case is the whole string: O(N)
-            Total = O(N^3)
+            1. O(N) to look through each index of the string "s" 
+            2. O(M) to look through each element in "wordDict" for each index, since need to test all words that have the right length 
+            3. O(N) to compare string "s" to each word in "wordDict", since the word could be the same length as "s" 
         Space: O(N) - length of the dp array 
     """
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
