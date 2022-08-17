@@ -13,7 +13,6 @@ def knapSack(W, wt, val, n):
             return float('-inf')
         elif n == 0 or W == 0:
             return 0
-        
         if t[n][W] > -1:
             return t[n][W]
         # choice diagram code
